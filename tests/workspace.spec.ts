@@ -9,6 +9,8 @@ test.beforeEach(async ({ page }) => {
       name: 'A little clarity. A lot of possibility.',
     }),
   ).toBeVisible()
+  await expect(page).toHaveTitle('Lekka | Your money, in perspective')
+  await expect(page.locator('.brand-word')).toHaveText('lekka.')
 })
 
 test('all fifteen workspace views render without runtime errors', async ({
@@ -278,6 +280,7 @@ test('documents survive a complete backup and restore', async ({
   const backupPromise = page.waitForEvent('download')
   await page.getByRole('button', { name: 'Export backup', exact: true }).click()
   const backup = await backupPromise
+  expect(backup.suggestedFilename()).toMatch(/^lekka-backup-\d{4}-\d{2}-\d{2}\.json$/)
   const backupPath = testInfo.outputPath('backup.json')
   await backup.saveAs(backupPath)
   await page.getByRole('button', { name: 'Start fresh', exact: true }).click()

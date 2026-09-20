@@ -94,7 +94,7 @@ export function ReportsPage() {
           onClick={() =>
             downloadCSV(
               transactionExport(transactions, state.settings.currency),
-              `folio-report-${month}.csv`,
+              `lekka-report-${month}.csv`,
             )
           }
         >
@@ -431,7 +431,7 @@ export function ActivityPage() {
                 Time: item.date,
                 Activity: item.text,
               })),
-              'folio-activity.csv',
+              'lekka-activity.csv',
             )
           }
         >
@@ -644,8 +644,8 @@ export function SettingsPage() {
             <div>
               <strong>Restore a workspace</strong>
               <p>
-                Replace this workspace with a validated Folio backup, including
-                its documents.
+                Replace this workspace with a validated Lekka or legacy Folio
+                backup, including its documents.
               </p>
             </div>
             <button
@@ -738,7 +738,7 @@ export function SettingsPage() {
         <div>
           <strong>Private by architecture, not a cloud vault.</strong>
           <p>
-            Folio stores data in IndexedDB on this browser and origin. No
+            Lekka stores data in IndexedDB on this browser and origin. No
             account, bank sync, cross-device sync, server backup, or app-level
             encryption is included. Anyone with access to this browser profile
             can access your records. A hosted copy remains local to each

@@ -117,7 +117,7 @@ export function TransactionsPage() {
         Notes: item.notes,
         Deductible: item.deductible,
       })),
-      'folio-transactions.csv',
+      'lekka-transactions.csv',
     )
   return (
     <>

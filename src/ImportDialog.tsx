@@ -355,7 +355,7 @@ export default function ImportDialog() {
               onClick={() =>
                 downloadBlob(
                   new Blob([sample], { type: 'text/csv' }),
-                  'folio-sample-statement.csv',
+                  'lekka-sample-statement.csv',
                 )
               }
             >

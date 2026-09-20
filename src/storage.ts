@@ -63,7 +63,7 @@ export async function exportBackup(state: AppState) {
     new Blob([JSON.stringify({ format: 'folio-backup-v1', state, files })], {
       type: 'application/json',
     }),
-    `folio-backup-${new Date().toISOString().slice(0, 10)}.json`,
+    `lekka-backup-${new Date().toISOString().slice(0, 10)}.json`,
   )
 }
 

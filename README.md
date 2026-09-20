@@ -1,6 +1,8 @@
-# Folio
+# Lekka
 
 A local-first personal finance workspace with a responsive ADO-style sidebar, light/dark themes, real statement imports, editable records, and persistent browser storage.
+
+Named after the Telugu word *lekka*, meaning count or account. Formerly Folio; existing browser data and backups remain compatible.
 
 ## Run Locally
 
@@ -68,6 +70,8 @@ Records and files are saved in IndexedDB in the current browser profile and site
 This is **not an encrypted cloud vault**. There is no sign-in, server database, bank sync, multi-device sync, or multi-user collaboration. Anyone using the same browser profile can access the workspace. Clearing site data, private browsing, browser eviction, or changing origins can make data unavailable. Use a trusted device and keep backups. Avoid editing the same workspace concurrently in multiple tabs.
 
 **Settings > Export backup** includes records and actual document contents. The JSON is unencrypted; secure it like a bank statement. Restore validates shapes and references, then replaces the workspace/files in one IndexedDB transaction. Maximum restore size is 100 MB; keep the vault small enough to stay below that limit. Browser storage capacity varies.
+
+New exports use the `lekka-` filename prefix. The internal `folio-finance` database, `folio-review` session key, and `folio-backup-v1` backup format are intentionally unchanged to preserve existing data and older backups.
 
 ## Deploy
 

@@ -25,6 +25,7 @@ playwright-report/
 *.pfx
 credentials*.json
 folio-backup*.json
+lekka-backup*.json
 backups/
 private-data/
 statements/

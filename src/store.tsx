@@ -191,7 +191,7 @@ export function LoadWorkspace({ children }: { children: ReactNode }) {
     return (
       <main className="boot">
         <span className="brand-word">
-          folio<span>.</span>
+          lekka<span>.</span>
         </span>
         <p>Opening your workspace...</p>
       </main>

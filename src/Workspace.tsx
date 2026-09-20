@@ -158,7 +158,7 @@ function Workspace() {
             <BookOpen size={23} strokeWidth={2.3} />
           </span>
           <span className="brand-word">
-            folio<span>.</span>
+            lekka<span>.</span>
           </span>
           <span className="brand-tag">PERSONAL FINANCE</span>
         </a>

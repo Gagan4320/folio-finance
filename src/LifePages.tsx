@@ -318,7 +318,7 @@ export function IncomePage() {
           Status: item.status,
           Date: item.date,
         })),
-        'folio-payslips.csv',
+        'lekka-payslips.csv',
       )
     else
       downloadCSV(
@@ -331,7 +331,7 @@ export function IncomePage() {
           Currency: state.settings.currency,
           Status: item.status,
         })),
-        'folio-timesheets.csv',
+        'lekka-timesheets.csv',
       )
   }
   return (
@@ -836,7 +836,7 @@ export function TaxesPage() {
                   Currency: state.settings.currency,
                 })),
               ],
-              `folio-tax-organizer-${year}.csv`,
+              `lekka-tax-organizer-${year}.csv`,
             )
           }
         >
