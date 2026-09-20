@@ -1,0 +1,151 @@
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/600.css';
+@import '@fontsource/dm-sans/700.css';
+@import '@fontsource/manrope/500.css';
+@import '@fontsource/manrope/600.css';
+@import '@fontsource/manrope/700.css';
+@import '@fontsource/manrope/800.css';
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #252e29;
+  background: #f7f8f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg: #f7f8f6;
+  --surface: #fff;
+  --surface-hover: #f4f6f3;
+  --text: #252e29;
+  --muted: #7c847f;
+  --line: #e7ebe6;
+  --green: #267c5c;
+  --green-soft: #edf5ee;
+  --green-text: #287655;
+  --danger: #ba5554;
+  --amber: #b78335;
+  --shadow: 0 12px 48px #18271f16;
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #141917;
+  --surface: #1b211e;
+  --surface-hover: #232c26;
+  --text: #e1e7e1;
+  --muted: #a0aca3;
+  --line: #303a32;
+  --green: #89c9a2;
+  --green-soft: #23382b;
+  --green-text: #96cba8;
+  --danger: #f09390;
+  --amber: #d7af71;
+  --shadow: 0 12px 48px #0005;
+}
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  border: 0;
+  background: none;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #74a78b66;
+  outline-offset: 1px;
+  border-color: var(--green);
+}
+input[type='checkbox'] {
+  accent-color: #267c5c;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+button,
+input,
+select,
+textarea {
+  min-width: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Manrope', sans-serif;
+}
+svg {
+  flex-shrink: 0;
+}
+::selection {
+  background: #c9e3d3;
+  color: #183c29;
+}
+.sr-only {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.boot {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  text-align: center;
+}
+.boot p {
+  color: var(--muted);
+  max-width: 500px;
+}
